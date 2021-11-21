@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+    #clock {
+        font:bold 24px sans-serif;
+        background: #ddf;
+        padding: 15px;
+        border: solid black 2px;
+        border-radius: 10px;
+    }    
+    </style>
+</head>
+<body>
+    <h1>Digital Clock</h1>
+    <span id="clock"></span>
+    
+    <script>
+        // Define a function to display the current time
+        function displayTime(){
+            let clock = document.querySelector("#clock"); // Get element with id="clock"
+            let now = new Date(); // Get current time
+            clock.textContent=now.toLocaleTimeString(); // Display time in the clock
+        }
+        displayTime(); // Display the time right away
+        setInterval(displayTime, 1000); //And then update it every second
+    </script>
+</body>
+</html>
